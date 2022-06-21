@@ -1,0 +1,10 @@
+#!/bin/sh
+
+git stash -q --keep-index
+
+./gradlew clean build
+
+RESULT=$?
+
+git stash pop -q
+exit $RESULT

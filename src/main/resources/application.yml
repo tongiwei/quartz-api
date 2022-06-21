@@ -1,0 +1,16 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    ssl:
+      enabled: false
+  endpoint:
+    health:
+      show-details: always
+logging:
+  config: classpath:logback.xml
